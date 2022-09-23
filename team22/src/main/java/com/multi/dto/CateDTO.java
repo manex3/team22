@@ -8,11 +8,7 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
 
-@AllArgsConstructor
-@NoArgsConstructor
-@Setter
-@Getter
-@ToString
+
 public class CateDTO {
 	private int cate_id;
 	private int top_id;

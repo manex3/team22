@@ -20,7 +20,7 @@ PUBLIC "-//mybatis.org/DTD Mapper 3.0//EN"
 		DELETE FROM cart WHERE cart_id = #{cart_id}
 	</delete>
 	
-	<select id="cartsall" parameterType="String" resultType="CartDTO">
+	<select id="cartall" parameterType="String" resultType="CartDTO">
 	SELECT ca.cart_id, ca.cust_id, cu.name as cust_name, bo.b_name as book_name, 
 	bo.price as book_price, ca.b_count, ca.date as rdate
 	FROM cart ca

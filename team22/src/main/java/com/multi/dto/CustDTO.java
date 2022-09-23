@@ -8,11 +8,8 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
 
-@AllArgsConstructor
-@NoArgsConstructor
-@Setter
-@Getter
-@ToString
+
+
 public class CustDTO {
 	private String cust_id;
 	private int wish_id;
