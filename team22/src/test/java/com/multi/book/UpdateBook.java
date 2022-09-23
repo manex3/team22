@@ -15,7 +15,7 @@ class UpdateBook {
 
 	@Test
 	void contextLoads() {
-		BookDTO book = new CartDTO(1234, 101, "abc", 15, null);
+		BookDTO book = new BookDTO(0, 10, "해리포터", 20000, 1, "판매중",null, 5, "h.jpg");
 		try {
 			service.modify(book);
 		} catch (Exception e) {

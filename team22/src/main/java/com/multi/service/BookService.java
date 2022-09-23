@@ -10,7 +10,7 @@ import com.multi.frame.MyService;
 import com.multi.mapper.BookMapper;
 
 @Service
-public class BookService implements MyService<String, BookDTO>{
+public class BookService implements MyService<Integer, BookDTO>{
 
 	@Autowired
 	BookMapper mapper;
@@ -21,7 +21,7 @@ public class BookService implements MyService<String, BookDTO>{
 	}
 
 	@Override
-	public void remove(String k) throws Exception {
+	public void remove(Integer k) throws Exception {
 		mapper.delete(k);
 	}
 
@@ -31,7 +31,7 @@ public class BookService implements MyService<String, BookDTO>{
 	}
 
 	@Override
-	public BookDTO get(String k) throws Exception {
+	public BookDTO get(Integer k) throws Exception {
 		return mapper.select(k);
 	}
 

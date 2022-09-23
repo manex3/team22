@@ -17,7 +17,7 @@ class InsertCust {
 	
 	@Test
 	void contextLoads() {
-		CustDTO cust = new CustDTO("id01", 1, "pwd01","홍길동","010-1234-5678","a@gmail.com","서울",DATE(),"N");
+		CustDTO cust = new CustDTO("id01", 1, "pwd01","홍길동","010-1234-5678","a@gmail.com","서울",null,"N");
 		try {
 			service.register(cust);
 		} catch (Exception e) {

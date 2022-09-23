@@ -16,7 +16,7 @@ import lombok.ToString;
 
 public class OrderDetailsDTO {
 
-	private String o_detail;
+	private int o_detail;
 	private int order_id;
 	private int book_id;
 	private int o_count;
@@ -24,18 +24,18 @@ public class OrderDetailsDTO {
 	public OrderDetailsDTO() {
 	}
 
-	public OrderDetailsDTO(String o_detail, int order_id, int book_id, int o_count) {
+	public OrderDetailsDTO(int o_detail, int order_id, int book_id, int o_count) {
 		this.o_detail = o_detail;
 		this.order_id = order_id;
 		this.book_id = book_id;
 		this.o_count = o_count;
 	}
 
-	public String getO_detail() {
+	public int getO_detail() {
 		return o_detail;
 	}
 
-	public void setO_detail(String o_detail) {
+	public void setO_detail(int o_detail) {
 		this.o_detail = o_detail;
 	}
 

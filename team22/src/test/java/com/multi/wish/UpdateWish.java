@@ -14,7 +14,7 @@ class UpdateWish {
 
 	@Test
 	void contextLoads() {
-		WishDTO wish = new WishDTO(1234, 101, "abc", 15, null);
+		WishDTO wish = new WishDTO(3,9);
 		try {
 			service.modify(wish);
 		} catch (Exception e) {

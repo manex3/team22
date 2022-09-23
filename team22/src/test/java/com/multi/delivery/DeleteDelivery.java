@@ -14,7 +14,7 @@ class DeleteDelivery {
 	@Test
 	void contextLoads() {
 		try {
-			service.remove(1234);
+			service.remove("본가");
 		} catch (Exception e) {
 			e.printStackTrace();
 		}

@@ -5,33 +5,30 @@ PUBLIC "-//mybatis.org/DTD Mapper 3.0//EN"
 <mapper namespace="com.multi.mapper.CartMapper">
 	
 	<select id="select" parameterType="Integer" resultType="CartDTO">
-		SELECT ca.id, ca.cust_id, it.name as item_name, it.price as item_price, 
-		it.imgname as item_imgname,ca.cnt, ca.rdate
-		FROM cart ca
-		INNER JOIN item it ON ca.item_id = it.id
-		WHERE ca.id = #{id}
+		SELECT * FROM cart WHERE cart_id=#{cart_id}
 	</select>
 	<select id="selectall" resultType="CartDTO">
+		SELECT * FROM cart
 	</select>
 	<insert id="insert" parameterType="CartDTO">
-		INSERT INTO cart VALUES (NULL, #{cust_id}, #{item_id}, #{cnt}, NOW())
+		INSERT INTO cart VALUES (NULL, #{cust_id}, #{book_id}, #{b_count}, #{date},#{book_price},#{book_bname},#{book_img})
 	</insert>
 	<update id="update" parameterType="CartDTO">
-		UPDATE cart SET item_id =#{item_id}, cnt=#{cnt} WHERE id = #{id}
+		UPDATE cart SET cust_id =#{cust_id},book_id =#{book_id}, b_count=#{b_count}, date=#{date},book_price=#{book_price},book_bname=#{book_bname},book_img=#{book_img} WHERE id = #{id}
 	</update>
 	<delete id="delete" parameterType="Integer">
-		DELETE FROM cart WHERE id = #{id}
+		DELETE FROM cart WHERE cart_id = #{cart_id}
 	</delete>
 	
 	<select id="cartsall" parameterType="String" resultType="CartDTO">
-		SELECT ca.id, ca.cust_id, cu.name as cust_name, it.name as item_name, 
-		it.price as item_price, ca.cnt, ca.rdate
-		FROM cart ca
-		INNER JOIN cust cu ON ca.cust_id = cu.id 
-		INNER JOIN item it ON ca.item_id = it.id
-		WHERE ca.cust_id = #{cust_id}
+	SELECT ca.cart_id, ca.cust_id, cu.name as cust_name, bo.b_name as book_name, 
+	bo.price as book_price, ca.b_count, ca.date as rdate
+	FROM cart ca
+	INNER JOIN cust cu ON ca.cust_id = cu.cust_id 
+	INNER JOIN book bo ON ca.book_id = bo.book_id
+	WHERE ca.cust_id = #{cu.cust_id}
 	</select>
-	
+
 </mapper>
 
 

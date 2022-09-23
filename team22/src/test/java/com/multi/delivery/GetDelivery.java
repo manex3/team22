@@ -17,7 +17,7 @@ class GetDelivery {
 	void contextLoads() {
 		DeliveryDTO delivery = null;
 		try {
-			delivery = service.get(100);
+			delivery = service.get("집");
 			
 		} catch (Exception e) {
 			e.printStackTrace();

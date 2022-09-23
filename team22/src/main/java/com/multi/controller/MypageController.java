@@ -20,6 +20,13 @@ public class MypageController {
 		model.addAttribute("center", "mypage/mypage");
 		return "main";
 	}
+	
+	@RequestMapping({"/orderhistory"})
+	public String orderhistory1(Model model) {
+		model.addAttribute("center", "orderhistory/orderhis_center");
+		model.addAttribute("left", "orderhistory/orderhis_left");
+		return "main";
+	}
 
 }
 

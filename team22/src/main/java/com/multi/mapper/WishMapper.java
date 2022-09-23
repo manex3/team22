@@ -7,7 +7,7 @@ import com.multi.dto.DeliveryDTO;
 import com.multi.dto.WishDTO;
 import com.multi.frame.MyMapper;
 
-public interface WishMapper extends MyMapper<String, WishDTO> {
+public interface WishMapper extends MyMapper<Integer, WishDTO> {
 	public List<WishDTO> wishall(String wish_id) throws Exception;
 
 }

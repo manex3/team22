@@ -15,7 +15,7 @@ class InsertBook {
 
 	@Test
 	void contextLoads() {
-		BookDTO book = new BookDTO(0, 10, "해리포터", 30000, 1, "판매중", "", 5, "h.jpg");
+		BookDTO book = new BookDTO(0, 10, "해리포터", 30000, 1, "판매중",null, 5, "h.jpg");
 		try {
 			service.register(book);
 		} catch (Exception e) {

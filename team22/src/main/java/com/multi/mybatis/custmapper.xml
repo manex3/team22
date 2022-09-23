@@ -11,10 +11,10 @@ PUBLIC "-//mybatis.org/DTD Mapper 3.0//EN"
 		SELECT * FROM cust
 	</select>
 	<insert id="insert" parameterType="custDTO">
-		INSERT INTO cust VALUES (#{cust_id},#{pwd},#{name},#{email,#{addr},#{mobile}})
+		INSERT INTO cust VALUES (#{cust_id},#{wish_id},#{pwd},#{name},#{mobile},#{email},#{addr},#{hdate},#{withdrawal})
 	</insert>
 	<update id="update" parameterType="custDTO">
-		UPDATE cust SET pwd=#{pwd},name=#{name},email=#{email},addr=#{addr},mobile=#{mobile} WHERE id=#{id}
+		UPDATE cust SET cust_id=#{cust_id},wish_id=#{wish_id},pwd=#{pwd},name=#{name},mobile=#email=#{mobile},email=#{email},addr=#{addr},hdate=#{hdate}withdrawal=#{withdrawal}) WHERE id=#{id}
 	</update>
 	<delete id="delete" parameterType="String">
 		DELETE FROM cust WHERE cust_id=#{cust_id}

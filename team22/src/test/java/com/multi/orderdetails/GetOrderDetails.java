@@ -17,7 +17,7 @@ class GetOrderDetails {
 	void contextLoads() {
 		OrderDetailsDTO order_details = null;
 		try {
-			order_details = service.get(100);
+			order_details = service.get(1000001);
 			
 		} catch (Exception e) {
 			e.printStackTrace();

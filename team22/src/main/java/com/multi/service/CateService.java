@@ -10,7 +10,7 @@ import com.multi.frame.MyService;
 import com.multi.mapper.CateMapper;
 
 @Service
-public class CateService implements MyService<String, CateDTO>{
+public class CateService implements MyService<Integer, CateDTO>{
 
 	@Autowired
 	CateMapper mapper;
@@ -21,7 +21,7 @@ public class CateService implements MyService<String, CateDTO>{
 	}
 
 	@Override
-	public void remove(String k) throws Exception {
+	public void remove(Integer k) throws Exception {
 		mapper.delete(k);
 	}
 
@@ -31,7 +31,7 @@ public class CateService implements MyService<String, CateDTO>{
 	}
 
 	@Override
-	public CateDTO get(String k) throws Exception {
+	public CateDTO get(Integer k) throws Exception {
 		return mapper.select(k);
 	}
 

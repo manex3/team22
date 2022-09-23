@@ -20,7 +20,7 @@ class GetCart {
 	void contextLoads() {
 		CartDTO cart = null;
 		try {
-			cart = service.get(100);
+			cart = service.get(3);
 
 		} catch (Exception e) {
 			e.printStackTrace();

@@ -14,7 +14,7 @@ class UpdateDelivery {
 
 	@Test
 	void contextLoads() {
-		DeliveryDTO delivery = new DeliveryDTO(1234, 101, "abc", 15, null);
+		DeliveryDTO delivery = new DeliveryDTO("집",10001,"배송완료");
 		try {
 			service.modify(delivery);
 		} catch (Exception e) {

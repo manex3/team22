@@ -17,7 +17,7 @@ class GetBook {
 	void contextLoads() {
 		BookDTO book = null;
 		try {
-			book = service.get(100);
+			book = service.get(1);
 		} catch (Exception e) {
 			e.printStackTrace();
 		}

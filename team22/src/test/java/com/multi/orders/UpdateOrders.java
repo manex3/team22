@@ -14,7 +14,7 @@ class UpdateOrders {
 
 	@Test
 	void contextLoads() {
-		OrdersDTO orders = new OrdersDTO(1234, 101, "abc", 15, null);
+		OrdersDTO orders = new OrdersDTO(10011, "id11", "김태연", "010-0309-1989", "서울", 9, 39900, "신용카드", null, "결제 완료");
 		try {
 			service.modify(orders);
 		} catch (Exception e) {

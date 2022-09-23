@@ -14,7 +14,7 @@ class DeleteCate {
 	@Test
 	void contextLoads() {
 		try {
-			service.remove(1234);
+			service.remove(11);
 		} catch (Exception e) {
 			e.printStackTrace();
 		}

@@ -14,7 +14,7 @@ class InsertDelivery {
 
 	@Test
 	void contextLoads() {
-		DeliveryDTO delivery = new DeliveryDTO(1234, 101, "abc", 10, null);
+		DeliveryDTO delivery = new DeliveryDTO("집2",10008,"배송완료");
 		try {
 			service.register(delivery);
 		} catch (Exception e) {

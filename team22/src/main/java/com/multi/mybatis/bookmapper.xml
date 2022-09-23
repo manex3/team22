@@ -17,7 +17,7 @@ PUBLIC "-//mybatis.org/DTD Mapper 3.0//EN"
 		UPDATE book SET cate_id=#{cate_id},b_name=#{b_name},price=#{price},stock=#{stock},state=#{state},date=#{date},sales=#{sales},
 						book_img=#{book_img} WHERE book_id=#{book_id}
 	</update>
-	<delete id="delete" parameterType="String">
+	<delete id="delete" parameterType="Integer">
 		DELETE FROM book WHERE book_id=#{book_id}
 	</delete>
 	

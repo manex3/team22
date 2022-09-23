@@ -14,7 +14,7 @@ class DeleteOrderDetails {
 	@Test
 	void contextLoads() {
 		try {
-			service.remove(1234);
+			service.remove(1000001);
 		} catch (Exception e) {
 			e.printStackTrace();
 		}

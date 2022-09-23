@@ -16,7 +16,7 @@ PUBLIC "-//mybatis.org/DTD Mapper 3.0//EN"
 	<update id="update" parameterType="CateDTO">
 		UPDATE cate SET top_id=#{top_id},c_name=#{c_name} WHERE cate_id=#{cate_id}
 	</update>
-	<delete id="delete" parameterType="String">
+	<delete id="delete" parameterType="Integer">
 		DELETE FROM cate WHERE cate_id=#{cate_id}
 	</delete>
 	

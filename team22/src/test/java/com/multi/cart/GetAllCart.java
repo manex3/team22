@@ -26,5 +26,4 @@ class GetAllCart {
 			System.out.println(c);
 		}
 	}
-
 }

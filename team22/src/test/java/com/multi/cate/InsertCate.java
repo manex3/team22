@@ -1,4 +1,4 @@
-package com.multi.cart;
+package com.multi.cate;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,7 +14,7 @@ class InsertCate {
 
 	@Test
 	void contextLoads() {
-		CateDTO cate = new CateDTO(1234, 101, "abc", 10, null);
+		CateDTO cate = new CateDTO(11,10,"소설");
 		try {
 			service.register(cate);
 		} catch (Exception e) {
@@ -23,3 +23,4 @@ class InsertCate {
 	}
 
 }
+

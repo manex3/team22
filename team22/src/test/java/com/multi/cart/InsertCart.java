@@ -1,4 +1,6 @@
-package com.multi.cate;
+package com.multi.cart;
+
+import java.util.Date;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,12 +16,11 @@ class InsertCart {
 
 	@Test
 	void contextLoads() {
-		CartDTO cart = new CartDTO(1234, 101, "abc", 10, null);
+		CartDTO cart = new CartDTO(1,"id01",1,1,null,30000,"해리포터","a.img");
 		try {
 			service.register(cart);
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
 	}
-
 }

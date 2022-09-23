@@ -14,7 +14,7 @@ class UpdateOrderDetails {
 
 	@Test
 	void contextLoads() {
-		OrderDetailsDTO order_details = new OrderDetailsDTO(1234, 101, "abc", 15, null);
+		OrderDetailsDTO order_details = new OrderDetailsDTO(1000001, 10008, 1, 10);
 		try {
 			service.modify(order_details);
 		} catch (Exception e) {

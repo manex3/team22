@@ -5,21 +5,21 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
 import com.multi.dto.CartDTO;
-import com.multi.service.CartService;
+import com.multi.dto.CateDTO;
+import com.multi.service.CateService;
 
 @SpringBootTest
-class UpdateCart {
+class UpdateCate {
 	@Autowired
-	CartService service;
+	CateService service;
 
 	@Test
 	void contextLoads() {
-		CartDTO cart = new CartDTO(1234, 101, "abc", 15, null);
+		CateDTO cart = new CateDTO(21,20,"외국잡지");
 		try {
 			service.modify(cart);
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
 	}
-
 }

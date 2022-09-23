@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org/DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.multi.mapper.wishMapper">
+	
+	<select id="select" parameterType="String" resultType="wishDTO">
+		SELECT * FROM wish WHERE wish_id=#{wish_id}
+	</select>
+	<select id="selectall" resultType="wishDTO">
+		SELECT * FROM wish
+	</select>
+	<insert id="insert" parameterType="wishDTO">
+		INSERT INTO wish VALUES (#{wish_id},#{book_id})
+	</insert>
+	<update id="update" parameterType="wishDTO">
+		UPDATE wish SET cate_id=#{wish_id},#{book_id}
+	</update>
+	<delete id="delete" parameterType="Integer">
+		DELETE FROM wish WHERE wish_id=#{wish_id}
+	</delete>
+	
+</mapper>

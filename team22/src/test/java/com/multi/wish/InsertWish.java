@@ -14,7 +14,7 @@ class InsertWish {
 
 	@Test
 	void contextLoads() {
-		WishDTO wish = new WishDTO(1234, 101, "abc", 10, null);
+		WishDTO wish = new WishDTO(3,3);
 		try {
 			service.register(wish);
 		} catch (Exception e) {

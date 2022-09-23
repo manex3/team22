@@ -14,7 +14,7 @@ class InsertOrderDetails {
 
 	@Test
 	void contextLoads() {
-		OrderDetailsDTO order_details = new OrderDetailsDTO(1234, 101, "abc", 10, null);
+		OrderDetailsDTO order_details = new OrderDetailsDTO(1000001, 10008, 1, 8);
 		try {
 			service.register(order_details);
 		} catch (Exception e) {

@@ -10,7 +10,7 @@ import com.multi.frame.MyService;
 import com.multi.mapper.WishMapper;
 
 @Service
-public class WishService implements MyService<String, WishDTO>{
+public class WishService implements MyService<Integer, WishDTO>{
 
 	@Autowired
 	WishMapper mapper;
@@ -21,7 +21,7 @@ public class WishService implements MyService<String, WishDTO>{
 	}
 
 	@Override
-	public void remove(String k) throws Exception {
+	public void remove(Integer k) throws Exception {
 		mapper.delete(k);
 	}
 
@@ -31,7 +31,7 @@ public class WishService implements MyService<String, WishDTO>{
 	}
 
 	@Override
-	public WishDTO get(String k) throws Exception {
+	public WishDTO get(Integer k) throws Exception {
 		return mapper.select(k);
 	}
 
