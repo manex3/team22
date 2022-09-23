@@ -1,33 +1,25 @@
-package com.multi.cust;
-
-import java.util.List;
+package com.multi.delivery;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
-import com.multi.dto.CustDTO;
-import com.multi.service.CustService;
+import com.multi.dto.DeliveryDTO;
+import com.multi.service.DeliveryService;
 
 @SpringBootTest
-class GetAllCust {
-
+class InsertDelivery {
 	@Autowired
-	CustService service;
+	DeliveryService service;
 
 	@Test
 	void contextLoads() {
-		List<CustDTO> list = null;
+		DeliveryDTO delivery = new DeliveryDTO(1234, 101, "abc", 10, null);
 		try {
-			list = service.get();
+			service.register(delivery);
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-
-		for (CustDTO c : list) {
-			System.out.println(c);
-		}
-
 	}
 
 }

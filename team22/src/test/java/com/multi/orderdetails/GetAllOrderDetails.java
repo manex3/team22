@@ -1,4 +1,4 @@
-package com.multi.cust;
+package com.multi.orderdetails;
 
 import java.util.List;
 
@@ -6,28 +6,26 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
-import com.multi.dto.CustDTO;
-import com.multi.service.CustService;
+import com.multi.dto.CartDTO;
+import com.multi.dto.OrderDetailsDTO;
+import com.multi.service.OrderDetailsService;
 
 @SpringBootTest
-class GetAllCust {
-
+class GetAllOrderDetails {
 	@Autowired
-	CustService service;
+	OrderDetailsService service;
 
 	@Test
 	void contextLoads() {
-		List<CustDTO> list = null;
+		List<OrderDetailsDTO> list = null;
 		try {
 			list = service.get();
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-
-		for (CustDTO c : list) {
+		for (OrderDetailsDTO c : list) {
 			System.out.println(c);
 		}
-
 	}
 
 }

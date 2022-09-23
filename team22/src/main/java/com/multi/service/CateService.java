@@ -3,25 +3,25 @@ package com.multi.service;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
-import com.multi.dto.CartsDTO;
 import com.multi.dto.CateDTO;
 import com.multi.frame.MyService;
-import com.multi.mapper.CartsMapper;
 import com.multi.mapper.CateMapper;
 
-public class CateService implements MyService<Integer, CateDTO>{
+@Service
+public class CateService implements MyService<String, CateDTO>{
 
 	@Autowired
 	CateMapper mapper;
 	
 	@Override
 	public void register(CateDTO v) throws Exception {
-		mapper.insert(v);		
+		mapper.insert(v);
 	}
 
 	@Override
-	public void remove(Integer k) throws Exception {
+	public void remove(String k) throws Exception {
 		mapper.delete(k);
 	}
 
@@ -31,17 +31,14 @@ public class CateService implements MyService<Integer, CateDTO>{
 	}
 
 	@Override
-	public CateDTO get(Integer k) throws Exception {
+	public CateDTO get(String k) throws Exception {
 		return mapper.select(k);
 	}
 
 	@Override
 	public List<CateDTO> get() throws Exception {
-		return null;
+		return mapper.selectall();
 	}
 
-	public List<CateDTO> cartsall(String cate_id) throws Exception {
-		return mapper.cateall(cate_id);
-	}
 
 }

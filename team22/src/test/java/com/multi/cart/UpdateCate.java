@@ -1,39 +1,27 @@
-package com.multi.carts;
-
-import java.util.List;
+package com.multi.cart;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
-import com.multi.dto.CartsDTO;
-import com.multi.dto.CustDTO;
-import com.multi.service.CartsService;
+import com.multi.dto.CartDTO;
+import com.multi.dto.CateDTO;
+import com.multi.service.CateService;
 
 @SpringBootTest
-class GetAllCarts {
-
+class UpdateCate {
 	@Autowired
-	CartsService service;
-	
+	CateService service;
+
 	@Test
 	void contextLoads() {
-		List<CartsDTO> list = null;
+		CateDTO cart = new CateDTO(1234, 101, "abc", 15, null);
 		try {
-			list = service.cartsall("id01");
+			service.modify(cart);
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		
-		for(CartsDTO c:list) {
-			System.out.println(c);
-		}
-		
 	}
 
 }
-
-
-
-

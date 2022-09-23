@@ -1,31 +1,25 @@
-package com.multi.item;
+package com.multi.wish;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
-import com.multi.dto.ItemDTO;
-import com.multi.service.ItemService;
+import com.multi.dto.WishDTO;
+import com.multi.service.WishService;
 
 @SpringBootTest
-class InsertItem {
-
+class UpdateWish {
 	@Autowired
-	ItemService service;
-	
+	WishService service;
+
 	@Test
 	void contextLoads() {
-		ItemDTO item = new ItemDTO(0, "모자", 30000, "h.jpg", null);
+		WishDTO wish = new WishDTO(1234, 101, "abc", 15, null);
 		try {
-			service.register(item);
+			service.modify(wish);
 		} catch (Exception e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 	}
 
 }
-
-
-
-

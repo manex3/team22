@@ -5,18 +5,18 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.multi.dto.BookDTO;
+import com.multi.dto.OrdersDTO;
 import com.multi.frame.MyService;
-import com.multi.mapper.BookMapper;
+import com.multi.mapper.OrdersMapper;
 
 @Service
-public class BookService implements MyService<String, BookDTO>{
+public class OrdersService implements MyService<String, OrdersDTO>{
 
 	@Autowired
-	BookMapper mapper;
+	OrdersMapper mapper;
 	
 	@Override
-	public void register(BookDTO v) throws Exception {
+	public void register(OrdersDTO v) throws Exception {
 		mapper.insert(v);
 	}
 
@@ -26,17 +26,17 @@ public class BookService implements MyService<String, BookDTO>{
 	}
 
 	@Override
-	public void modify(BookDTO v) throws Exception {
+	public void modify(OrdersDTO v) throws Exception {
 		mapper.update(v);
 	}
 
 	@Override
-	public BookDTO get(String k) throws Exception {
+	public OrdersDTO get(String k) throws Exception {
 		return mapper.select(k);
 	}
 
 	@Override
-	public List<BookDTO> get() throws Exception {
+	public List<OrdersDTO> get() throws Exception {
 		return mapper.selectall();
 	}
 

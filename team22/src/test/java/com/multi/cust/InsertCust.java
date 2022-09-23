@@ -1,5 +1,7 @@
 package com.multi.cust;
 
+import java.util.Date;
+
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -15,7 +17,7 @@ class InsertCust {
 	
 	@Test
 	void contextLoads() {
-		CustDTO cust = new CustDTO("id88", "pwd88", "james","a@gmail.com","서울","010-1234-5678");
+		CustDTO cust = new CustDTO("id01", 1, "pwd01","홍길동","010-1234-5678","a@gmail.com","서울",DATE(),"N");
 		try {
 			service.register(cust);
 		} catch (Exception e) {
@@ -25,6 +27,8 @@ class InsertCust {
 	}
 
 }
+
+
 
 
 

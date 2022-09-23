@@ -1,33 +1,27 @@
-package com.multi.cust;
-
-import java.util.List;
+package com.multi.book;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
-import com.multi.dto.CustDTO;
-import com.multi.service.CustService;
+import com.multi.dto.BookDTO;
+import com.multi.service.BookService;
 
 @SpringBootTest
-class GetAllCust {
+class GetBook {
 
 	@Autowired
-	CustService service;
+	BookService service;
 
 	@Test
 	void contextLoads() {
-		List<CustDTO> list = null;
+		BookDTO book = null;
 		try {
-			list = service.get();
+			book = service.get(100);
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-
-		for (CustDTO c : list) {
-			System.out.println(c);
-		}
-
+		System.out.println(book);
 	}
 
 }

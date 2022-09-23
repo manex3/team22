@@ -1,33 +1,23 @@
-package com.multi.cust;
-
-import java.util.List;
+package com.multi.cart;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
-import com.multi.dto.CustDTO;
-import com.multi.service.CustService;
+import com.multi.service.CartService;
 
 @SpringBootTest
-class GetAllCust {
-
+class DeleteCart {
 	@Autowired
-	CustService service;
+	CartService service;
 
 	@Test
 	void contextLoads() {
-		List<CustDTO> list = null;
 		try {
-			list = service.get();
+			service.remove(1234);
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-
-		for (CustDTO c : list) {
-			System.out.println(c);
-		}
-
 	}
 
 }

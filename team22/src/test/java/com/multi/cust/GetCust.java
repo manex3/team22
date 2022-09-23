@@ -12,21 +12,16 @@ class GetCust {
 
 	@Autowired
 	CustService service;
-	
+
 	@Test
 	void contextLoads() {
 		CustDTO cust = null;
 		try {
 			cust = service.get("id01");
 		} catch (Exception e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		System.out.println(cust);
 	}
 
 }
-
-
-
-

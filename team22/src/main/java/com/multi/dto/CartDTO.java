@@ -13,22 +13,21 @@ import lombok.ToString;
 @Setter
 @Getter
 @ToString
-public class CartsDTO {
+public class CartDTO {
 	private int id;
 	private String cust_id;
 	private int item_id;
 	private int cnt;
 	private Date rdate;
-	
 	private String cust_name;
 	private String item_name;
 	private int item_price;
 	private String item_imgname;
-	
-	public CartsDTO() {
+
+	public CartDTO() {
 	}
 
-	public CartsDTO(int id, String cust_id, int item_id, int cnt, Date rdate, String cust_name, String item_name,
+	public CartDTO(int id, String cust_id, int item_id, int cnt, Date rdate, String cust_name, String item_name,
 			int item_price, String item_imgname) {
 		this.id = id;
 		this.cust_id = cust_id;
@@ -119,19 +118,5 @@ public class CartsDTO {
 				+ rdate + ", cust_name=" + cust_name + ", item_name=" + item_name + ", item_price=" + item_price
 				+ ", item_imgname=" + item_imgname + "]";
 	}
-	
-	
-	
+
 }
-
-
-
-
-
-
-
-
-
-
-
-

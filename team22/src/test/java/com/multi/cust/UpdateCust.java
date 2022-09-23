@@ -15,7 +15,7 @@ class UpdateCust {
 	
 	@Test
 	void contextLoads() {
-		CustDTO cust = new CustDTO("id89", "pwd89", "james","a@gmail.com","서울","010-1234-5678");
+		CustDTO cust = new CustDTO("id01", 1, "pwd01","홍길동","010-1234-5678","a@gmail.com","서울",NOW(),"N");
 		try {
 			service.modify(cust);
 		} catch (Exception e) {
@@ -23,7 +23,6 @@ class UpdateCust {
 			e.printStackTrace();
 		}
 	}
-
 }
 
 

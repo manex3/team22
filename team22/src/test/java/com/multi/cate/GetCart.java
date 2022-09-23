@@ -1,4 +1,4 @@
-package com.multi.carts;
+package com.multi.cate;
 
 import java.util.List;
 
@@ -6,26 +6,26 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
-import com.multi.dto.CartsDTO;
+import com.multi.dto.CartDTO;
 import com.multi.dto.CustDTO;
-import com.multi.service.CartsService;
+import com.multi.service.CartService;
 
 @SpringBootTest
-class InsertCarts {
+class GetCart {
 
 	@Autowired
-	CartsService service;
+	CartService service;
 	
 	@Test
 	void contextLoads() {
+		CartDTO cart = null;
 		try {
-			service.register(new CartsDTO(0, "id01", 101, 3, null, null, null, 0, null));
-			System.out.println("OK");
+			cart = service.get(100);
+
 		} catch (Exception e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		
+		System.out.println(cart);
 	}
 
 }

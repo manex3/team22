@@ -1,4 +1,4 @@
-package com.multi.item;
+package com.multi.cate;
 
 import java.util.List;
 
@@ -6,33 +6,26 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
-import com.multi.dto.ItemDTO;
-import com.multi.service.ItemService;
+import com.multi.dto.CartDTO;
+import com.multi.dto.CateDTO;
+import com.multi.service.CateService;
 
 @SpringBootTest
-class GetAllItem {
-
+class GetAllCate {
 	@Autowired
-	ItemService service;
-	
+	CateService service;
+
 	@Test
 	void contextLoads() {
-		List<ItemDTO> list = null;
+		List<CateDTO> list = null;
 		try {
 			list = service.get();
 		} catch (Exception e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		
-		for(ItemDTO c:list) {
+		for (CateDTO c : list) {
 			System.out.println(c);
 		}
-		
 	}
 
 }
-
-
-
-

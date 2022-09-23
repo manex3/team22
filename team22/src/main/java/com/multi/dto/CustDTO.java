@@ -15,30 +15,45 @@ import lombok.ToString;
 @ToString
 public class CustDTO {
 	private String cust_id;
+	private int wish_id;
 	private String pwd;
 	private String name;
+	private String mobile;
 	private String email;
 	private String addr;
-	private String mobile;
-	
+	private Date hdate;
+	private String withdrawal;
+
 	public CustDTO() {
 	}
 
-	public CustDTO(String cust_id, String pwd, String name, String email, String addr, String mobile) {
+	public CustDTO(String cust_id, int wish_id, String pwd, String name, String mobile, String email, String addr,
+			Date hdate, String withdrawal) {
 		this.cust_id = cust_id;
+		this.wish_id = wish_id;
 		this.pwd = pwd;
 		this.name = name;
+		this.mobile = mobile;
 		this.email = email;
 		this.addr = addr;
-		this.mobile = mobile;
+		this.hdate = hdate;
+		this.withdrawal = withdrawal;
 	}
 
-	public String getId() {
+	public String getCust_id() {
 		return cust_id;
 	}
 
-	public void setId(String cust_id) {
+	public void setCust_id(String cust_id) {
 		this.cust_id = cust_id;
+	}
+
+	public int getWish_id() {
+		return wish_id;
+	}
+
+	public void setWish_id(int wish_id) {
+		this.wish_id = wish_id;
 	}
 
 	public String getPwd() {
@@ -57,6 +72,14 @@ public class CustDTO {
 		this.name = name;
 	}
 
+	public String getMobile() {
+		return mobile;
+	}
+
+	public void setMobile(String mobile) {
+		this.mobile = mobile;
+	}
+
 	public String getEmail() {
 		return email;
 	}
@@ -73,26 +96,27 @@ public class CustDTO {
 		this.addr = addr;
 	}
 
-	public String getMobile() {
-		return mobile;
+	public Date getHdate() {
+		return hdate;
 	}
 
-	public void setMobile(String mobile) {
-		this.mobile = mobile;
+	public void setHdate(Date hdate) {
+		this.hdate = hdate;
+	}
+
+	public String getWithdrawal() {
+		return withdrawal;
+	}
+
+	public void setWithdrawal(String withdrawal) {
+		this.withdrawal = withdrawal;
 	}
 
 	@Override
 	public String toString() {
-		return "CustDTO [cust_id=" + cust_id + ", pwd=" + pwd + ", name=" + name + ", email=" + email + ", addr=" + addr
-				+ ", mobile=" + mobile + "]";
+		return "CustDTO [cust_id=" + cust_id + ", wish_id=" + wish_id + ", pwd=" + pwd + ", name=" + name + ", mobile="
+				+ mobile + ", email=" + email + ", addr=" + addr + ", hdate=" + hdate + ", withdrawal=" + withdrawal
+				+ "]";
 	}
 
-	
-	
 }
-
-
-
-
-
-

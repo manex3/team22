@@ -1,6 +1,5 @@
 package com.multi.dto;
 
-
 import java.util.Date;
 
 import lombok.AllArgsConstructor;
@@ -18,7 +17,7 @@ public class CateDTO {
 	private int cate_id;
 	private int top_id;
 	private String c_name;
-	
+
 	public CateDTO() {
 	}
 
@@ -56,7 +55,5 @@ public class CateDTO {
 	public String toString() {
 		return "CateDTO [cate_id=" + cate_id + ", top_id=" + top_id + ", c_name=" + c_name + "]";
 	}
-	
-	
-	
+
 }

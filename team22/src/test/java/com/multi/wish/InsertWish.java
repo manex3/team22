@@ -1,33 +1,25 @@
-package com.multi.cust;
-
-import java.util.List;
+package com.multi.wish;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
-import com.multi.dto.CustDTO;
-import com.multi.service.CustService;
+import com.multi.dto.WishDTO;
+import com.multi.service.WishService;
 
 @SpringBootTest
-class GetAllCust {
-
+class InsertWish {
 	@Autowired
-	CustService service;
+	WishService service;
 
 	@Test
 	void contextLoads() {
-		List<CustDTO> list = null;
+		WishDTO wish = new WishDTO(1234, 101, "abc", 10, null);
 		try {
-			list = service.get();
+			service.register(wish);
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-
-		for (CustDTO c : list) {
-			System.out.println(c);
-		}
-
 	}
 
 }
