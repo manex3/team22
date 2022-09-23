@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org/DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.multi.mapper.BookMapper">
+	
+	<select id="select" parameterType="String" resultType="BookDTO">
+		SELECT * FROM book WHERE book_id=#{book_id}
+	</select>
+	<select id="selectall" resultType="BookDTO">
+		SELECT * FROM book
+	</select>
+	<insert id="insert" parameterType="BookDTO">
+		INSERT INTO book VALUES (#{book_id},#{cate_id},#{b_name},#{price},#{stock},#{state},#{date},#{sales},#{book_img})
+	</insert>
+	<update id="update" parameterType="BookDTO">
+		UPDATE book SET cate_id=#{cate_id},b_name=#{b_name},price=#{price},stock=#{stock},state=#{state},date=#{date},sales=#{sales},
+						book_img=#{book_img} WHERE book_id=#{book_id}
+	</update>
+	<delete id="delete" parameterType="String">
+		DELETE FROM book WHERE book_id=#{book_id}
+	</delete>
+	
+</mapper>
